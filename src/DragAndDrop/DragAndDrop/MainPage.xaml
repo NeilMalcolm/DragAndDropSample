@@ -17,7 +17,7 @@
     <StackLayout>
         
         <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
-            <Label Text="Welcome to Xamarin.Forms!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+            <Label Text="Drag and Drop Sample!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
         </Frame>
 
         <Label Text="{Binding MostRecentDrop}"/>
@@ -27,29 +27,29 @@
                 <RowDefinition Height="50"/>
                 <RowDefinition Height="50"/>
             </Grid.RowDefinitions>
-            <v:DropTarget Text="1"/>
+            <v:HighlightingDropTarget Text="1"/>
 
-            <v:DropTarget Text="2"
+            <v:HighlightingDropTarget Text="2"
                           Grid.Column="1"/>
 
-            <v:DropTarget Text="3"
+            <v:HighlightingDropTarget Text="3"
                    Grid.Column="2"/>
 
-            <v:DropTarget Text="4"
+            <v:HighlightingDropTarget Text="4"
                    Grid.Row="1"/>
-            <v:DropTarget Text="5"
+            <v:HighlightingDropTarget Text="5"
                    Grid.Row="1"
                    Grid.Column="1"/>
-            <v:DropTarget Text="6"
+            <v:HighlightingDropTarget Text="6"
                    Grid.Row="1"
                    Grid.Column="2"/>
 
-            <v:DropTarget Text="7"
+            <v:HighlightingDropTarget Text="7"
                    Grid.Row="2"/>
-            <v:DropTarget Text="8"
+            <v:HighlightingDropTarget Text="8"
                    Grid.Row="2"
                    Grid.Column="1"/>
-            <v:DropTarget Text="9"
+            <v:HighlightingDropTarget Text="9"
                    Grid.Row="2"
                    Grid.Column="2"/>
         </Grid>

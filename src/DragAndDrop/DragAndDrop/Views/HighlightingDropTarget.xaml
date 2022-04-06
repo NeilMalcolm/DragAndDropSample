@@ -7,6 +7,6 @@
        xmlns:v="clr-namespace:DragAndDrop.Views">
     <Label x:Name="DisplayLabel"
            Text="{Binding Source={RelativeSource Mode=FindAncestor, 
-                                                 AncestorType={x:Type v:DropTarget}}, 
+                                                 AncestorType={x:Type v:HighlightingDropTarget}}, 
                           Path=Text}"/>
 </v:BaseDropTarget>
