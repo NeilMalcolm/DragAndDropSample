@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DragAndDrop.MainPage"
+             xmlns:ts="clr-namespace:DragAndDrop.TemplateSelectors"
+             xmlns:v="clr-namespace:DragAndDrop.Views">
+
+    <ContentPage.Resources>
+        <ts:TypeModelTemplateSelector x:Key="TypeModelSelector"/>
+        <Style TargetType="Label">
+            <Setter Property="VerticalTextAlignment"
+                    Value="Center"/>
+            <Setter Property="HorizontalTextAlignment"
+                    Value="Center"/>
+        </Style>
+    </ContentPage.Resources>
+    <StackLayout>
+        
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Label Text="Welcome to Xamarin.Forms!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+
+        <Label Text="{Binding MostRecentDrop}"/>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+            </Grid.RowDefinitions>
+            <v:DropTarget Text="1"/>
+
+            <v:DropTarget Text="2"
+                          Grid.Column="1"/>
+
+            <v:DropTarget Text="3"
+                   Grid.Column="2"/>
+
+            <v:DropTarget Text="4"
+                   Grid.Row="1"/>
+            <v:DropTarget Text="5"
+                   Grid.Row="1"
+                   Grid.Column="1"/>
+            <v:DropTarget Text="6"
+                   Grid.Row="1"
+                   Grid.Column="2"/>
+
+            <v:DropTarget Text="7"
+                   Grid.Row="2"/>
+            <v:DropTarget Text="8"
+                   Grid.Row="2"
+                   Grid.Column="1"/>
+            <v:DropTarget Text="9"
+                   Grid.Row="2"
+                   Grid.Column="2"/>
+        </Grid>
+
+        <ListView ItemsSource="{Binding ItemsSource}"
+                  ItemTemplate="{StaticResource TypeModelSelector}">
+        </ListView>
+    </StackLayout>
+
+</ContentPage>

@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<v:BaseDraggableView  xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DragAndDrop.Views.TypeTwoView"
+             xmlns:v="clr-namespace:DragAndDrop.Views"
+             xmlns:m="clr-namespace:DragAndDrop.Models"
+             x:DataType="m:TypeTwoModel">
+    <Label Text="{Binding Text}" />
+</v:BaseDraggableView>
